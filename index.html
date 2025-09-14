@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Stream Player - Zadruga Streams</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,26 +14,111 @@
             flex-direction: column;
             align-items: center;
         }
-        h1 {
-            color: #333;
+        h1 { color: #333; }
+        #homeLink {
+            margin-bottom: 10px;
+            text-align: center;
         }
-        #videoContainer {
-            position: relative;
-            max-width: 100%;
-            margin-bottom: 20px;
+        #homeLink a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        #video {
-            width: 100%;
-            height: auto;
-            max-height: 60vh;
-            background: #000;
+        #homeLink a:hover {
+            background: #5a6268;
         }
+        #videoContainer { position: relative; max-width: 100%; margin-bottom: 20px; }
+        #video { width: 100%; height: auto; max-height: 60vh; background: #000; }
         #error {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: #fff; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; display: none;
+        }
+        .controls { margin-bottom: 20px; }
+        button {
+            padding: 10px 20px; margin: 5px; background: #007bff; color: white;
+            border: none; border-radius: 5px; cursor: pointer; font-size: 16px;
+        }
+        button:hover { background: #0056b3; }
+        button.active { background: #28a745; }
+        .description { max-width: 800px; text-align: center; margin-top: 10px; color: #666; }
+        #errorDetails { color: red; margin-top: 10px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div id="homeLink">
+        <a href="https://github.com/petrosaurus985/temp" target="_blank">🏠 Home - petrosaurus985/temp</a>
+    </div>
+    <h1>Live Stream Player</h1>
+    <div class="controls">
+        <button onclick="switchStream(0)" class="active">Zadruga Live 1</button>
+        <button onclick="switchStream(1)">Zadruga Live 2</button>
+        <button onclick="switchStream(2)">Zadruga Live 3</button>
+        <button onclick="switchStream(3)">Zadruga Live 4</button>
+    </div>
+    <div id="videoContainer">
+        <video id="video" controls autoplay muted></video>
+        <div id="error">Greška u učitavanju streama. Proveri link ili internet konekciju.</div>
+    </div>
+    <p class="description" id="desc">Zadruga Live 1 - Glavni stream.</p>
+    <p id="errorDetails"></p>
+
+    <script>
+        const streams = [
+            { url: 'https://webtvstream.bhtelecom.ba/hls19/zadruga_live1_1200.m3u8', desc: 'Zadruga Live 1 - Glavni stream.' },
+            { url: 'https://webtvstream.bhtelecom.ba/hls19/zadruga_live2_1200.m3u8', desc: 'Zadruga Live 2 - Dodatni stream.' },
+            { url: 'https://webtvstream.bhtelecom.ba/hls19/zadruga_live3_1200.m3u8', desc: 'Zadruga Live 3 - Treći stream.' },
+            { url: 'https://webtvstream.bhtelecom.ba/hls19/zadruga_live4_1200.m3u8', desc: 'Zadruga Live 4 - Četvrti stream.' }
+        ];
+
+        let currentStreamIndex = 0;
+        const video = document.getElementById('video');
+        const errorDiv = document.getElementById('error');
+        const errorDetails = document.getElementById('errorDetails');
+        const descP = document.getElementById('desc');
+        const buttons = document.querySelectorAll('button');
+
+        function switchStream(index) {
+            currentStreamIndex = index;
+            updateButtons();
+            loadStream(streams[index].url, streams[index].desc);
+        }
+
+        function updateButtons() {
+            buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentStreamIndex));
+        }
+
+        function loadStream(url, desc) {
+            descP.textContent = desc;
+            errorDiv.style.display = 'none';
+            errorDetails.textContent = '';
+            video.src = url;
+
+            video.addEventListener('error', () => {
+                errorDiv.style.display = 'block';
+                errorDetails.textContent = `Video error: Link ne radi ili browser ne podržava HLS nativno.`;
+                console.error('Video error:', video.error);
+            });
+
+            video.addEventListener('loadeddata', () => {
+                errorDiv.style.display = 'none';
+            });
+
+            // Automatski pokreni ako je stream dostupan
+            video.play().catch(() => {
+                errorDiv.style.display = 'block';
+                errorDetails.textContent = `Ne može se pokrenuti stream. Proveri CORS ili geoblokadu.`;
+            });
+        }
+
+        // Učitaj prvi stream na početku
+        loadStream(streams[0].url, streams[0].desc);
+    </script>
+</body>
+</html>            color: #fff;
             background: rgba(0,0,0,0.7);
             padding: 10px;
             border-radius: 5px;
