@@ -1,0 +1,45 @@
+---
+/**
+ * Generic hub page – /nekretnine
+ * This is the page Google indexes. Visitors from known cities
+ * are transparently redirected by the middleware to their city page (302).
+ * Googlebot always lands here (bots are never redirected).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const cities = [
+  { name: 'Beograd',  slug: 'beograd',  count: 1240 },
+  { name: 'Novi Sad', slug: 'novi-sad', count: 580  },
+  { name: 'Niš',      slug: 'nis',      count: 310  },
+];
+---
+<BaseLayout
+  title="Nekretnine u Srbiji – Kupovina i Iznajmljivanje | ExampleRealty"
+  description="Pretraži hiljade oglasa za stanove, kuće i poslovne prostore u Srbiji. Beograd, Novi Sad, Niš i još 50+ gradova."
+  canonical={`${site}/nekretnine`}
+>
+  <h1 style="font-size:1.9rem; margin-bottom:.5rem;">Nekretnine u Srbiji</h1>
+  <p style="color:#555; margin-bottom:2rem;">Izaberite grad ili pretražite sve oglase ispod.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1rem;">
+    {cities.map(({ name, slug, count }) => (
+      <a
+        href={`/nekretnine/${slug}`}
+        style="background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;"
+      >
+        <strong style="font-size:1.1rem;">{name}</strong>
+        <p style="color:#888;font-size:.85rem;margin-top:.3rem;">{count} aktivnih oglasa</p>
+      </a>
+    ))}
+  </div>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "ExampleRealty",
+    "url": `${site}/nekretnine`,
+    "areaServed": cities.map(c => ({ "@type": "City", "name": c.name })),
+  })} />
+</BaseLayout>

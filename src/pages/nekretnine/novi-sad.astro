@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const listings = [
+  { id: 1, title: 'Stan u centru Novog Sada',       type: 'Stan',  rooms: '2.0', area: 61,  price: 128_000, img: '🏢' },
+  { id: 2, title: 'Vikendica na Fruškoj gori',      type: 'Kuća',  rooms: '3.0', area: 95,  price: 145_000, img: '🏡' },
+  { id: 3, title: 'Garsonjera Liman III',           type: 'Stan',  rooms: '1.0', area: 31,  price: 72_000,  img: '🏗️' },
+  { id: 4, title: 'Novogradnja Adice',              type: 'Stan',  rooms: '3.0', area: 82,  price: 165_000, img: '🏘️' },
+];
+---
+<BaseLayout
+  title="Nekretnine Novi Sad – Stanovi i Kuće | ExampleRealty"
+  description="Pronađite stan ili kuću u Novom Sadu. Više od 580 oglasa. Liman, Adice, centar i ostale četvrti."
+  canonical={`${site}/nekretnine/novi-sad`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Početna",    "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Nekretnine", "item": `${site}/nekretnine` },
+      { "@type": "ListItem", "position": 3, "name": "Novi Sad",   "item": `${site}/nekretnine/novi-sad` },
+    ],
+  })} />
+
+  <nav style="font-size:.85rem;color:#888;margin-bottom:1.5rem;">
+    <a href="/">Početna</a> &rsaquo;
+    <a href="/nekretnine">Nekretnine</a> &rsaquo;
+    <strong>Novi Sad</strong>
+  </nav>
+
+  <h1 style="font-size:1.9rem;margin-bottom:.4rem;">Nekretnine u Novom Sadu</h1>
+  <p style="color:#555;margin-bottom:2rem;">580 aktivnih oglasa – stanovi, kuće i vikendice</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:1.25rem;">
+    {listings.map((l) => (
+      <article style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;">
+        <div style="background:#fef3e8;height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;">{l.img}</div>
+        <div style="padding:1rem;">
+          <span style="font-size:.75rem;background:#c95d00;color:#fff;padding:.2rem .6rem;border-radius:20px;">{l.type}</span>
+          <h2 style="font-size:1rem;margin:.5rem 0 .3rem;">{l.title}</h2>
+          <p style="color:#666;font-size:.85rem;">📐 {l.area} m²&nbsp;&nbsp;🛏 {l.rooms} sobe</p>
+          <p style="font-weight:700;font-size:1.1rem;margin-top:.5rem;color:#c95d00;">€{l.price.toLocaleString('sr-RS')}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

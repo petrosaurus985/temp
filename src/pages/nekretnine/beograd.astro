@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const listings = [
+  { id: 1, title: 'Moderan stan u Vračaru',        type: 'Stan',  rooms: '3.0', area: 78,  price: 195_000, img: '🏢' },
+  { id: 2, title: 'Kuća na Zvezdari sa vrtom',     type: 'Kuća',  rooms: '5.0', area: 180, price: 320_000, img: '🏠' },
+  { id: 3, title: 'Garsonjera na Novom Beogradu',  type: 'Stan',  rooms: '1.0', area: 28,  price: 68_000,  img: '🏗️' },
+  { id: 4, title: 'Luksuzni penthouse Savski Venac',type:'Stan',  rooms: '4.0', area: 145, price: 580_000, img: '🌆' },
+  { id: 5, title: 'Poslovni prostor Terazije',     type: 'Lokal', rooms: '–',   area: 55,  price: 120_000, img: '🏪' },
+  { id: 6, title: 'Dvosoban stan Zemun',           type: 'Stan',  rooms: '2.0', area: 52,  price: 105_000, img: '🏘️' },
+];
+---
+<BaseLayout
+  title="Nekretnine Beograd – Stanovi i Kuće | ExampleRealty"
+  description="Pronađite stan, kuću ili poslovni prostor u Beogradu. Više od 1,240 provjerenih oglasa na ExampleRealty."
+  canonical={`${site}/nekretnine/beograd`}
+>
+  <!-- Breadcrumb (schema.org) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Početna",    "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Nekretnine", "item": `${site}/nekretnine` },
+      { "@type": "ListItem", "position": 3, "name": "Beograd",    "item": `${site}/nekretnine/beograd` },
+    ],
+  })} />
+
+  <!-- Page header -->
+  <nav style="font-size:.85rem;color:#888;margin-bottom:1.5rem;">
+    <a href="/">Početna</a> &rsaquo;
+    <a href="/nekretnine">Nekretnine</a> &rsaquo;
+    <strong>Beograd</strong>
+  </nav>
+
+  <h1 style="font-size:1.9rem;margin-bottom:.4rem;">Nekretnine u Beogradu</h1>
+  <p style="color:#555;margin-bottom:2rem;">1,240 aktivnih oglasa – stanovi, kuće, poslovni prostori</p>
+
+  <!-- Listing grid -->
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap:1.25rem;">
+    {listings.map((l) => (
+      <article style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;">
+        <div style="background:#e8f0fe;height:140px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;">{l.img}</div>
+        <div style="padding:1rem;">
+          <span style="font-size:.75rem;background:#1a3c5e;color:#fff;padding:.2rem .6rem;border-radius:20px;">{l.type}</span>
+          <h2 style="font-size:1rem;margin:.5rem 0 .3rem;">{l.title}</h2>
+          <p style="color:#666;font-size:.85rem;">📐 {l.area} m²&nbsp;&nbsp;🛏 {l.rooms} sobe</p>
+          <p style="font-weight:700;font-size:1.1rem;margin-top:.5rem;color:#1a3c5e;">€{l.price.toLocaleString('sr-RS')}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <!-- Local Business schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "ExampleRealty Beograd",
+    "url": `${site}/nekretnine/beograd`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beograd",
+      "addressCountry": "RS",
+    },
+    "areaServed": { "@type": "City", "name": "Beograd" },
+  })} />
+</BaseLayout>
