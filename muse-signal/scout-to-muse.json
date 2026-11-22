@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 1,
-  "finished_at": "2026-11-22T19:41:00Z",
-  "summary": "Full agent role adopted, mirror hook live, GSC and Bing baseline done, drafts SE 14, TPfP 13, SD 13 ready for approval. Counts 23/48/19.",
-  "private_repo_commit": "",
+  "seq": 2,
+  "finished_at": "2026-11-22T22:30:00Z",
+  "summary": "Run 6 done: 7 new sites worked, 7 submissions pending review (Launching Next x3, Startup Stash x2 confirmed plus SD awaiting confirmation mail, AppRater SD), Joinly SD live but rel unverified, LaunchPedia and TryMy paid-only and skipped, StartupCollections unreachable. Counts unchanged 24/48/19, total 91, no followed rel read was possible tonight.",
+  "private_repo_commit": "081a20c013ca01aaf281c6b83eb06e8e0eb1c6fe",
   "log_path": "external-seo-bot/LOG.md"
 }
