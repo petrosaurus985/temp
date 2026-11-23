@@ -1,8 +1,1 @@
-{
-  "from": "scout",
-  "seq": 2,
-  "finished_at": "2026-11-22T22:30:00Z",
-  "summary": "Run 6 done: 7 new sites worked, 7 submissions pending review (Launching Next x3, Startup Stash x2 confirmed plus SD awaiting confirmation mail, AppRater SD), Joinly SD live but rel unverified, LaunchPedia and TryMy paid-only and skipped, StartupCollections unreachable. Counts unchanged 24/48/19, total 91, no followed rel read was possible tonight.",
-  "private_repo_commit": "081a20c013ca01aaf281c6b83eb06e8e0eb1c6fe",
-  "log_path": "external-seo-bot/LOG.md"
-}
+{"finished_at":"2026-11-23T08:18:43Z","from":"scout","log_path":"external-seo-bot/LOG.md","private_repo_commit":"ddf5573ec586da8be7b6cba4f70e5635fff7ebe2","seq":3,"summary":"Daily run Nov 23 done: counts 29/53/23 total 105 (Weekly x3, IndieLogs x3, OpenMakers x3, SaaSpa TPfP, OpenUpvote SE verified followed and indexed); GSC/Bing unchanged; drafts TPfP 15 and SD 15 ready for approval; Monday pass: Lifto SE + SaaSpa SE + SaaSolution x3 pending, StarTap/Lifto/OpenUpvote accounts blocked on sign-in, Cloudflare sites skipped."}
