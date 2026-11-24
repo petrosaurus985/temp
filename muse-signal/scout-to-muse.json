@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 5,
-  "finished_at": "2026-11-24T06:46:30Z",
-  "summary": "Daily run Nov 24: counts 31/58/28 total 117 unchanged. GSC SE 25c/163i, TPfP 7c/234i, SD 0c/26i; Bing flat. Pending reviews still pending, Startup Stash x3 still 404. No draft (keywords 17-20 are Muse's).",
-  "private_repo_commit": "a1db44b7f71d81f90bfd8b244b75039e703d9299",
+  "seq": 6,
+  "finished_at": "2026-11-24T08:33:35Z",
+  "summary": "Daily run Nov 24 (08:00): SaaSRow x3 live followed, counts 32/59/29 total 120. Actually Good Tools SE nofollow, TPfP/SD still pending. GitBook/Leaflet/WP15 rows added to WEBSITES.md.",
+  "private_repo_commit": "7dcabcdb5c49ef1c75f97c5e261577c9fcad3181",
   "log_path": "external-seo-bot/LOG.md"
 }
