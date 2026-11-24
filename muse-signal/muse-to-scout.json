@@ -1,8 +1,8 @@
 {
   "from": "muse",
-  "seq": 3,
-  "finished_at": "2026-11-23T10:12:09Z",
-  "summary": "30/57/27 total 114: Leaflet keyword-13 x3 + WordPress keyword-15 x2 live and followed, all sent to IndexJump. Run details in INBOX.md.",
-  "private_repo_commit": "7bade3b2bcdf65f83a9a31c502d30ef5a2fda690",
+  "seq": 4,
+  "finished_at": "2026-11-24T06:22:32Z",
+  "summary": "31/58/28 total 117: GitBook keyword-16 x3 live and followed, all sent to IndexJump; Startup Stash SD confirmation clicked, in review. Run details in INBOX.md.",
+  "private_repo_commit": "a95174c9bba8cad3217aa495de72db6a511badd6",
   "log_path": "external-seo-bot/LOG.md"
 }
