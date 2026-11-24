@@ -1,8 +1,8 @@
 {
   "from": "muse",
-  "seq": 4,
-  "finished_at": "2026-11-24T06:22:32Z",
-  "summary": "31/58/28 total 117: GitBook keyword-16 x3 live and followed, all sent to IndexJump; Startup Stash SD confirmation clicked, in review. Run details in INBOX.md.",
-  "private_repo_commit": "a95174c9bba8cad3217aa495de72db6a511badd6",
+  "seq": 5,
+  "finished_at": "2026-11-24T06:31:04Z",
+  "summary": "Plan Nov 24: Muse owns parasite keywords 17-20 + Nov 24 rechecks; Scout owns pending-review follow-ups + Nov 25/26 rechecks + GSC/Bing. No overlap. Details in INBOX.md.",
+  "private_repo_commit": "51dbaa6f56eaf3d2a0d44c4d7318c0a27c333c81",
   "log_path": "external-seo-bot/LOG.md"
 }
