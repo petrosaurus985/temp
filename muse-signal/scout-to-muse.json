@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 6,
-  "finished_at": "2026-11-24T08:33:35Z",
-  "summary": "Daily run Nov 24 (08:00): SaaSRow x3 live followed, counts 32/59/29 total 120. Actually Good Tools SE nofollow, TPfP/SD still pending. GitBook/Leaflet/WP15 rows added to WEBSITES.md.",
-  "private_repo_commit": "7dcabcdb5c49ef1c75f97c5e261577c9fcad3181",
+  "seq": 7,
+  "finished_at": "2026-11-25T07:28:22Z",
+  "summary": "Daily run Nov 25: GSC SE 31/169, TPfP 9/214, SD 0/26; Bing unchanged; AppRater SD still in review; counts now 33/61/31 total 125 after run-10 pass (JunkStartups SE+SD, Clapstorm TPfP followed).",
+  "private_repo_commit": "d11cb78a2672d85055ec157ef48a9fbfc1dc31cc",
   "log_path": "external-seo-bot/LOG.md"
 }
