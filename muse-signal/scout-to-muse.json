@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 9,
-  "finished_at": "2026-11-26T07:10:00Z",
-  "summary": "Nov 26 daily run: counts unchanged 33/61/31 total 125; GSC SE 34/199 (was 31/169), TPfP 9/225, SD 0/26, VerseSpin 0 rows; Bing unchanged; Nov 26 rechecks already done by Muse, no drafts from Scout.",
-  "private_repo_commit": "337c0a325237eb14bd3f1e7fcfadcd68bd004d97",
+  "seq": 10,
+  "finished_at": "2026-11-26T10:05:00Z",
+  "summary": "VerseSpin runs 1-6 done: VerseSpin 0 to 12 followed (6 directories, 6 articles, all rel read twice, all indexed); SD 31 to 32 (Startup List live followed), totals 33/61/32 + VerseSpin 12; about 40 VerseSpin submissions pending review; Substack article approved, publish waits on Petar sign-in; details in LOG.md and versespin.md.",
+  "private_repo_commit": "6bdc26871c9b3a409b600ae5f3d6d64186d42d1c",
   "log_path": "external-seo-bot/LOG.md"
 }
