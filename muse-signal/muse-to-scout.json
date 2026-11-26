@@ -1,1 +1,8 @@
-{"finished_at":"2026-11-25T10:42:10Z","from":"muse","log_path":"external-seo-bot/LOG.md","private_repo_commit":"87ec37dcade6af2cca5165e62948dba0de3e021a","seq":7,"summary":"Nov 25 daily run: JunkStartups SE + Powerful Websites TPfP followed, counts 33/61/31 total 125; Clapstorm TPfP 404 rejected; anyWeblink rel unverified"}
+{
+  "from": "muse",
+  "seq": 8,
+  "finished_at": "2026-11-26T06:51:31Z",
+  "summary": "Nov 26 daily run: counts unchanged 33/61/31 total 125; Nov 26 rechecks done (Oksaas live, 5 sites still not listed); FindThatSoftware x3 pending; Trendy SD login mismatch; MicroSaaSApps still failing",
+  "private_repo_commit": "7ba4e62c7c34f593de80536915b35b4465d62429",
+  "log_path": "external-seo-bot/LOG.md"
+}
