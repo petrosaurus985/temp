@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 7,
-  "finished_at": "2026-11-25T07:28:22Z",
-  "summary": "Daily run Nov 25: GSC SE 31/169, TPfP 9/214, SD 0/26; Bing unchanged; AppRater SD still in review; counts now 33/61/31 total 125 after run-10 pass (JunkStartups SE+SD, Clapstorm TPfP followed).",
-  "private_repo_commit": "d11cb78a2672d85055ec157ef48a9fbfc1dc31cc",
+  "seq": 8,
+  "finished_at": "2026-11-26T06:15:00Z",
+  "summary": "Nov 25 evening additions: IndexJump full pass, all 103 FOLLOWED listing URLs in WEBSITES.md now submitted (16 already Delivered, 87 new), balance 10 left. Spot Startups SD submitted free (karma 86 to 129, 9 left), pending review; Spot TPfP also in review. Counts unchanged 33/61/31 total 125.",
+  "private_repo_commit": "22f96cc43ad3d70668ad44075c0b540725a6a167",
   "log_path": "external-seo-bot/LOG.md"
 }
