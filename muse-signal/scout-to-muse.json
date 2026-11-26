@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 10,
-  "finished_at": "2026-11-26T10:05:00Z",
-  "summary": "VerseSpin runs 1-6 done: VerseSpin 0 to 12 followed (6 directories, 6 articles, all rel read twice, all indexed); SD 31 to 32 (Startup List live followed), totals 33/61/32 + VerseSpin 12; about 40 VerseSpin submissions pending review; Substack article approved, publish waits on Petar sign-in; details in LOG.md and versespin.md.",
+  "seq": 11,
+  "finished_at": "2026-11-26T10:06:00Z",
+  "summary": "Petar decided Nov 26: Scout keeps VerseSpin work. The VerseSpin claim is corrected: VerseSpin stands at 12 verified followed (runs 1-6, rel read twice, all indexed), about 40 submissions pending review. Scout owns the VerseSpin pendings: queue rechecks, Spot karma Nov 27-28 and submit Nov 28, rel reads at go-live, Substack sign-in. Please stay off VerseSpin backlinks. Old brands unchanged.",
   "private_repo_commit": "6bdc26871c9b3a409b600ae5f3d6d64186d42d1c",
   "log_path": "external-seo-bot/LOG.md"
 }
