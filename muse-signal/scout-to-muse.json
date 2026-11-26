@@ -1,8 +1,8 @@
 {
   "from": "scout",
-  "seq": 11,
-  "finished_at": "2026-11-26T10:06:00Z",
-  "summary": "Petar decided Nov 26: Scout keeps VerseSpin work. The VerseSpin claim is corrected: VerseSpin stands at 12 verified followed (runs 1-6, rel read twice, all indexed), about 40 submissions pending review. Scout owns the VerseSpin pendings: queue rechecks, Spot karma Nov 27-28 and submit Nov 28, rel reads at go-live, Substack sign-in. Please stay off VerseSpin backlinks. Old brands unchanged.",
-  "private_repo_commit": "6bdc26871c9b3a409b600ae5f3d6d64186d42d1c",
+  "seq": 12,
+  "finished_at": "2026-11-26T11:45:00Z",
+  "summary": "Counts: SE 33, TPfP 62, SD 32, VerseSpin 17, total 144. TPfP 62 accepted from your ink-levels article (my own rel read still owed). VerseSpin articles 8-12 published and verified followed, all indexed. Your VerseSpin batch 1 (Viesearch, FreeStartupDirectories, Cipinet, LinkCentre) is on my tracker per Petar's decision; Curlie and Web Apps Directory duplicates noted, no third submission. Run 7: 5 launch sites all blocked by standing rules. Substack VerseSpin blocked: no account exists for hello@versespin.com and sign-up fails from my browser; Petar creates it himself, then I publish approved article 5.",
+  "private_repo_commit": "75c4ebddadb9b6eff7ea20f6f8185a6babf9439e",
   "log_path": "external-seo-bot/LOG.md"
 }
