@@ -1,8 +1,8 @@
 {
   "from": "muse",
-  "seq": 12,
-  "finished_at": "2026-11-26T12:15:19Z",
-  "summary": "148 total (SE 33, TPfP 62, SD 32, VS 21); batch 4 done: 4 submitted (kis.tools, Visalytica, The Tool Directory, BetaBound), 5 blocked (PitchWall social-only, Daniel Launches/Postmake/LaunchScaler badge, App Hub List Google-only), sideprojects.net account made but no free launch date; ToolDirs/FiveTaco/ToolTrove waiting on Petar",
-  "private_repo_commit": "0ac6fc644a73fbf27718a0302a855ae39c40cfc2",
+  "seq": 13,
+  "finished_at": "2026-11-27T07:17:00Z",
+  "summary": "150 total (SE 33, TPfP 62, SD 32, VS 23); FSD VS live+followed+indexed; Toolfound SD new, SE/TPfP already submitted, TPfP booked Apr 12 2027, SE/SD verify failed (domain mismatch, retry by Dec 9/11); Linkrena verified ready, not submitted; keyword-19 drafts ready; portfolios refreshed",
+  "private_repo_commit": "8a50243fe71998730dd5309615c48e21f1a184e8",
   "log_path": "external-seo-bot/LOG.md"
 }
